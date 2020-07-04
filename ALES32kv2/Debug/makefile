@@ -32,10 +32,10 @@ endif
 all: ALES32kv2.elf
 
 # Tool invocations
-ALES32kv2.elf: $(OBJS) $(USER_OBJS)
+ALES32kv2.elf: $(OBJS) $(USER_OBJS) ../STM32F031F6Px_FLASH.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F031F6Px_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "ALES32kv2.elf" @"objects.list" $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -specs=nosys.specs -specs=nano.specs -T"../STM32F031F6Px_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "ALES32kv2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
