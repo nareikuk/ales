@@ -6,7 +6,7 @@ easy to construct and simple to use altitude limiting switch for electric motor 
 The schematics, PCB and firmware are all provided. I may be able to supply blank PCBs or even fully populated PCBs in the future,
 once the bugs have been ironed out and I'm happy that the project has reached a production quality level.
 
-Note that currently the firmware is being debugged due to an elusive issue with the altitude cutoff not always working.
+Note that currently the firmware is working but some improvements required around startup reliability.
 
 The current features of the ALES v2 include:
 1) Pre-set altitude cut-off of 100m, 150m or 200m which are the three standards used in competition.
