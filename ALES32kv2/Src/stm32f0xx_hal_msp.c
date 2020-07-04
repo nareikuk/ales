@@ -34,7 +34,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f0xx_hal.h"
 
-extern void Error_Handler(void);
+extern void errorHandler(void);
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
