@@ -76,7 +76,7 @@ Bmp280Calibration bmpCalibration;
 
 #define RCSAMPLES 8
 
-#define VERBOSE 1
+//#define VERBOSE 1
 
 enum {
     BMP280_REGISTER_DIG_T1 = 0x88,
@@ -238,10 +238,11 @@ int main(void) {
 
     /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
     HAL_Init();
-    HAL_Delay(2000);
 
     /* Configure the system clock */
     SystemClock_Config();
+
+    HAL_Delay(2000);
 
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
